@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* Do style by following Online Tutorial Youtube Channel */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    /* gap: 30px; */
+    background: #1d2b3a;
+}
+
+.inputbox{
+    position: relative;
+    width: 250px;
+    margin: 25px -85px 20px;
+
+}
+.inputbox input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: #1d2b3a;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+    
+}
+.inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: white;
+    /* text-transform: uppercase; */
+    transition: 0.5s;
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span
+{
+    color: aqua;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.80em;
+    padding: 0 10px;
+    background: #1d2b3a;
+    border-left: 1px solid aqua;
+    border-right: 1px solid aqua;
+    letter-spacing: 0.1em;
+}
+.inputbox:nth-child(2) input:valid ~ span,
+.inputbox:nth-child(2) input:focus ~ span
+{
+    background: aqua;
+    color: #1d2b3a;
+    border-radius: 3px;
+}
+.inputbox input:valid,
+.inputbox input:focus{
+    border: 1px solid aqua;
+}
+/* Online tutorial end here */
+
+.login{
+width: 315px;
+height: 350px;
+padding: 60px 35px 35px 35px;
+border-radius: 30px;
+background-color: #1d2b3a;
+box-shadow: 10px 10px 15px  rgb(0, 255, 255),
+-10px -10px 15px rgb(0, 255, 255);
+}
+.admin_logo{
+    background: url(../images/Rlogo.jpg);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+   
+}
+.container{
+    width: 100%;
+    padding-left: 2px;
+    padding: 70px 100px 45px 0px;
+}
