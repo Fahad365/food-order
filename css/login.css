@@ -19,8 +19,10 @@ body{
 .inputbox{
     position: relative;
     width: 250px;
-    margin: 25px -85px 20px;
-
+    /* margin: 25px -85px 20px; */
+    /* margin-top: -10px; */
+    margin-top: -18px;
+    margin-bottom: 35px;
 }
 .inputbox input{
     width: 100%;
@@ -32,7 +34,6 @@ body{
     color: #fff;
     font-size: 1em;
     transition: 0.5s;
-    
 }
 .inputbox span{
     position: absolute;
@@ -71,7 +72,7 @@ body{
 
 .login{
 width: 315px;
-height: 350px;
+height: 400px;
 padding: 60px 35px 35px 35px;
 border-radius: 30px;
 background-color: #1d2b3a;
@@ -92,4 +93,37 @@ box-shadow: 10px 10px 15px  rgb(0, 255, 255),
     width: 100%;
     padding-left: 2px;
     padding: 70px 100px 45px 0px;
+    margin: -30px -5px -5px;
+}
+.lg_button{
+    position: relative;
+    text-align: center;
+    width: 100px;
+    margin-left: 150px;
+    margin-top: -7px;
+    /* padding: 40px; */
+    font-size: 20px;
+    background: #1d2b3a;
+    color: #fff;
+    font-family: poppins;
+    font-weight: 400;
+    border: 1.5px solid #15f4ee;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 100px;
+    text-transform: uppercase;
+    transition: 1.5s;
+}
+.lg_button:hover{
+    box-shadow: 0 0px 20px #15f4ee inset, 0 0px 20px 0 #15f4ee,
+    0 0px 20px #15f4ee inset, 0 0px 20px 0 #15f4ee;
+    text-shadow: 0 0 1px #15f4ee,0 0 1px #15f4ee;
+}
+
+.messege{
+color:white;
+font-weight: 400;
+text-align: center;
+text-shadow: 2px 2px 5px red,2px 2px 5px red;
+
 }
