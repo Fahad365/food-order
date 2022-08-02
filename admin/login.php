@@ -19,6 +19,10 @@ include('../config/constants.php');
                     echo $_SESSION['login'];
                     unset($_SESSION['login']);
                 }
+                if(isset($_SESSION['have-to-login'])){
+                    echo $_SESSION['have-to-login'];
+                    unset($_SESSION['have-to-login']);
+                }
                 ?>
             </div>
                 <form action="" method="post" class="container">
@@ -52,6 +56,9 @@ if(isset($_POST['submit'])){
     $count=mysqli_num_rows($result);
     if($count==1){
     $_SESSION['login']="<div class='success'>Login Successfull.</div>";
+
+    // TO check weather the user is logged in or not and logout will unset it 
+    $_SESSION['user']=$username;
     ?>
     <script>
          window.location.href='admin_index.php';

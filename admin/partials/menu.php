@@ -1,8 +1,9 @@
 <!-- Include database connection to menu because menu is included to all files -->
 <?php 
 // session_start();
-include('../config/constants.php');?>
-
+include('../config/constants.php');
+include('login_check.php');
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,6 +26,7 @@ include('../config/constants.php');?>
             <li><a href="manage-category.php">Categeroy</a></li>
             <li><a href="manage-food.php">Food</a></li>
             <li><a href="manage-order.php">Order</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
        </div>
     </div>
