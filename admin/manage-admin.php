@@ -15,7 +15,7 @@
             </h4>
             </div>
             <div class="card-body">
-            <table class="table table-dark table-striped table-hover">
+            <table class="table table-dark table-striped text-center align-middle table-hover table-bordered border-light">
           <thead>
             <tr class="fw-bold">
                 <td>SN</td>

@@ -52,7 +52,9 @@ include ('./partials/menu.php');?>
     </div>
    </div>
 </br>
-<!-- Get form data from Database -->
+
+<!-- Collect all the data from db and when the user 
+click submit then all the data will be updated -->
 <?php
  if(isset($_POST['submit'])){
     

@@ -5,20 +5,35 @@
     font-family: 'Poppins',sans-serif;
     box-sizing: border-box;
 }
-body{
+/* body{
 background-color: #1d2b3a;
+} */
+.container-fluid{
+    background-image: url('../images/bgbg.jpg');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    height: 100vh; 
+    background-position: center;
+    padding-top: 150px;
+
 }
 .card{
     width: 512px;
-height: 324px;
-padding: 60px 35px 35px 35px;
+height: 400px;
+padding: 35px 35px 35px 35px;
 border-radius: 30px;
-background-color: rgba(0,0,0,0.3);
-box-shadow: 10px 10px 15px  #fcf800,
--10px -10px 15px rgb(176, 252, 0);
+background-color: rgba(0,0,0,0);
+/* box-shadow: 10px 10px 15px  #fcf800,
+-10px -10px 15px rgb(176, 252, 0); */
 color: white;
 margin-bottom: 99px;
-margin-top: 97px;
+margin-left: 400px;
+/* margin-top: 97px; */
+}
+.card-header {
+    padding: 0.5rem 1rem;
+    margin-top: -35px;
+    background-color: rgba(0,0,0,.03);
 }
 .box{
     padding: 4px 15px 8px 45px;
@@ -52,6 +67,15 @@ margin-top: 97px;
     -webkit-appearance: none;
     cursor: pointer;
     
+}
+.field{
+    border-radius: 8px;
+    text-align: left;
+    background: none;
+    color: white;
+}
+.field::placeholder{
+    color: #b0fc00;
 }
 i.fa-solid{
     position: relative;
@@ -87,4 +111,23 @@ box-shadow: inset -1px -1px 3px rgba(81, 255, 0, 0.973),
         inset 2px 2px 6px rgba(255, 0, 0, 0.932);
         /* text-shadow: 0 0 5px rgb(0, 0, 0),
                      0 0 20px rgb(0, 0, 0); */
+    }
+.error{
+    color:white;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 2px 2px 5px red,2px 2px 5px red;
+    
+    }
+    .lg_button:checked{
+        width: 512px;
+height: 420px;
+padding: 60px 35px 35px 35px;
+border-radius: 30px;
+background-color: rgba(0,0,0,0.2);
+/* box-shadow: 10px 10px 15px  #fcf800,
+-10px -10px 15px rgb(176, 252, 0); */
+color: white;
+margin-bottom: 99px;
+margin-left: 400px;
     }
