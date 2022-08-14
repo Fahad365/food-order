@@ -190,7 +190,7 @@ if(isset($_POST['submit'])){
           description='$description',
           price=$price, 
           image_name='$image_name',
-          category_id='$category',
+          category_id='$Id',
           featured='$featured',
           active='$active'
           "; 
@@ -200,7 +200,7 @@ if(isset($_POST['submit'])){
 
     // Check weather the query is successfully execute or not
     if($result==true){
-        $_SESSION['message']="Category added successfully✅";
+        $_SESSION['message']="Food added successfully✅";
         ?>
         <script>
          window.location.href='manage-food.php';
