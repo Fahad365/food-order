@@ -36,6 +36,7 @@
 
             if(mysqli_num_rows($result)>0){
                 $food=mysqli_fetch_array($result);
+
                 $title=$food['title'];
                 $description=$food['description'];
                 $price=$food['price'];
@@ -214,14 +215,23 @@ if(isset($_POST['submit'])){
                     </script>
                     <?php
                     exit(0);
-            }}
-            }else{
-                $image_name=$current_image;
             }
-    
-        }else{
-            $image_name=$current_image;
         }
+    }
+    else{
+        $image_name=$current_image;
+    }
+} 
+else{
+    $image_name=$current_image;
+}
+            // }else{
+            //     $image_name=$current_image;
+            // }
+    
+        // else{
+        //     $image_name=$current_image;
+        // }
         // query to update those data into database.
     $sql="UPDATE tbl_food SET title='$title',description='$description',price=$price,image_name='$image_name',featured='$featured',active='$active'
     WHERE Id='$food_Id'" ;
@@ -246,6 +256,7 @@ if(isset($_POST['submit'])){
         <?php
         exit(0);
     }
-    }?> 
+}        
+?> 
 
 <?php include('./partials/footer.php');?>

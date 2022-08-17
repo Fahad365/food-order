@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Category</title>
-   <style>.category-img {border-radius:50%;}</style>
+   <style>.food-img {border-radius:50%;}</style>
 </head>
  <!-- Include navbar menu -->
  <?php include ('./partials/menu.php');?>
@@ -72,7 +72,7 @@
               if($image_name!=''){
                   // Display image
                   ?>
-                  <img src="../images/food/<?php echo $image_name;?>" width="70px" class="category-img" alt="category img">
+                  <img src="../images/Food/<?php echo $image_name;?>" width="70px" class="food-img" alt="Food img">
                   <?php
               }else{
                   // Display image Error messege

@@ -164,12 +164,12 @@ if(isset($_POST['submit'])){
                 </script>
                 <?php
                 exit(0);
-        }}
-        }else{
+        }
+    }
+}else{
             $image_name=$current_image;
         }
-
-    }else{
+}else{
         $image_name=$current_image;
     }
     // query to update those data into database.
