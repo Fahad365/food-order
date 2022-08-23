@@ -7,7 +7,7 @@
 
 .wrapper{
     /* border: 1px solid black; */
-    padding:1%;
+    padding:auto;
     width: 80%;
     margin:0 auto;
 }

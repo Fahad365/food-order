@@ -30,7 +30,7 @@
                     </p>
                     <br>
 
-                    <a href="#" class="btn btn-primary">Order Now</a>
+                    <a href="order.php?food_Id=<?php echo $Id;?>" class="btn btn-primary">Order Now</a>
                 </div>
             </div>
 

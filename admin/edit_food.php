@@ -186,7 +186,7 @@ if(isset($_POST['submit'])){
                 // Get the extention of image(jpg,png,jpeg)
             $ext=end(explode('.',$image_name));
             // Rename the image
-            $image_name="Food_Item_No:".rand(00,99).'.'.$ext;
+            $image_name="Food_Item_No_".rand(00,99).'.'.$ext;
             $source_path = $_FILES['image']['tmp_name'];
             $destination_path = "../images/Food/".$image_name;
             // upload the file into destination folder
