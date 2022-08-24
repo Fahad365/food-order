@@ -21,12 +21,14 @@
 }
 .text-center{
     text-align: center;
+   
 }
 .text-left{
     text-align: left;
 }
-.text-white{
-    color: white;
+/* for backend searching food title */
+.text{
+    color: rgb(144, 8, 255);
 }
 
 .clearfix{
@@ -172,12 +174,23 @@ body{
 /* CSS for Food SEarch Section */
 
 .food-search{
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/search_4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 7% 0;
     /* background-color: black; */
+}
+/* Order Form CSS */
+.container-fluid{
+    /* background-image: url(../images/form.jpg); */
+    background-color: #1d2b3a;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 7% 0;
+    /* height: 100vh; */
 }
 
 .food-search input[type="search"]{
@@ -186,6 +199,12 @@ body{
     font-size: 1rem;
     border: none;
     border-radius: 5px;
+    background-color: #383d46;
+    color: white;
+    
+}
+.order-heading{
+    color: white;
 }
 
 
@@ -258,9 +277,15 @@ body{
     border-radius: 5px;
     font-size: 1rem;
 }
+legend{
+    font-weight: bold;
+}
 .order-label{
     margin-bottom: 1%; 
     font-weight: bold;
+}
+.food-img{
+    border-radius: 50%;
 }
 
 

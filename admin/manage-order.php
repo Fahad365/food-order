@@ -1,11 +1,10 @@
-<!-- Include navbar menu -->
+
 <!-- Include navbar menu -->
 <?php include ('./partials/menu.php');?>
-
     <!-- Main section start here  -->
     <div class="main-content mp-8">
     <?php include('./partials/message.php')?>
-        <div class="container">
+        <div class="container-fluid">
        
           <div class="row">
             <div class="col-md-12">
@@ -18,9 +17,10 @@
             <div class="card-body">
             <table class="table table-dark table-striped text-center align-middle table-hover table-bordered border-light">
           <thead>
-            <tr class="fw-bold">
+            <tr class="fw-bold align-middle">
                 <td>SN</td>
                 <td>Food</td>
+                <td>Img</td>
                 <td>Price</td>
                 <td>Quantity</td>
                 <td>Total Price</td>
@@ -54,6 +54,7 @@
                   // It will run as long as their have data 
                   $Id=$order['Id'];
                   $food=$order['food'];
+                  $image_name=$order['image_name'];
                   $price=$order['price'];
                   $quantity=$order['qty'];
                   $total=$order['total'];
@@ -67,6 +68,20 @@
           <tr>
             <td><?php echo $serial_number++ ?></td>
             <td><?php echo $food;?></td>
+            <td>
+                <?php 
+                  //Check weater image name is available or not
+                  if($image_name!=''){
+                      // Display image
+                      ?>
+                      <img src="../images/Food/<?php echo $image_name;?>" width="70px" class="food-img" alt="Food img">
+                      <?php
+                  }else{
+                      // Display image Error messege
+                      echo "<div class=error>Image Not Added</div>";
+                  }
+                ?>
+            </td>
             <td><?php echo $price;?></td>
             <td><?php echo $quantity;?></td>
             <td><?php echo $total;?></td>
@@ -77,7 +92,7 @@
             <td><?php echo $customer_email;?></td>
             <td><?php echo $customer_address;?></td>
             <td>
-              <a href="update_order.php?Id=<?php echo $Id;?>" class="btn btn-outline-info btn-sm ">Update Order</a>
+              <a href="update_order.php?Id=<?php echo $Id;?>" class="btn btn-outline-info btn-sm "><i class="fa-solid fa-pen-to-square"></i>Update Order Status</a>
               
             </td>
           </tr>

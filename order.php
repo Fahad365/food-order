@@ -20,12 +20,12 @@ if(isset($_GET['food_Id'])){
 ?>
 
     <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search">
-        <div class="container">
+    <section class="food-order">
+        <div class="container-fluid">
             
-            <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+            <h2 class="text-center order-heading">Fill this form to confirm your order</h2>
 
-            <form action="" method="POST" class="order">
+            <form action="" method="POST" class="order" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Selected Food</legend>
 
@@ -82,10 +82,11 @@ if(isset($_GET['food_Id'])){
     <?php 
     if(isset($_POST['submit'])){
         $food=$_POST['food'];
+        // $image_name= $image_name;
         $price=$_POST['price'];
         $qty=$_POST['qty'];
         $total=$price*$qty;
-        $order_date=date("y-m-d h:i:sa");
+        $order_date=date_default_timezone_set("Asia/Dhaka").date("y-m-d h:i:sa");
         $status="ordered";  //ordered,delivered,cancel,on delivery
         $customer_name=$_POST['full-name'];
         $customer_contact=$_POST['contact'];
@@ -93,7 +94,7 @@ if(isset($_GET['food_Id'])){
         $customer_address=$_POST['address'];
 
         $sql="INSERT INTO tbl_order SET
-        food='$food',price=$price,qty=$qty,total=$total,order_date='$order_date',status='$status',
+        food='$food',image_name='$image_name',price=$price,qty=$qty,total=$total,order_date='$order_date',status='$status',
         customer_name='$customer_name',customer_contact='$customer_contact',customer_email='$customer_email',customer_address='$customer_address'";
         // query check
         // echo $sql;die();

@@ -86,8 +86,8 @@
         <td><?php echo $featured?></td>
         <td><?php echo $active?></td>
         <td>
-          <a href="edit_category.php?Id=<?php echo $Id;?>" class="btn btn-outline-info btn-sm mx-1">Update Category</a>
-          <a href="delete_category.php?Id=<?php echo $Id;?>&image_name=<?php echo $image_name;?>" class="btn btn-outline-danger btn-sm mx-1">Delete Category</a>
+          <a href="edit_category.php?Id=<?php echo $Id;?>" class="btn btn-outline-info btn-sm mx-1"><i class="fa-solid fa-pen-to-square"></i> Edit Category</a>
+          <a href="delete_category.php?Id=<?php echo $Id;?>&image_name=<?php echo $image_name;?>" class="btn btn-outline-danger btn-sm mx-1"><i class="fa-solid fa-trash-can"></i> Delete Category</a>
         </td>
       </tr>
       <?Php

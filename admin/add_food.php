@@ -24,7 +24,7 @@
                         }
                     ?>
                 <div class="card-body">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <table class="fw-bold">
                         <tr>
                             <td>Title</td>
@@ -120,11 +120,13 @@
 </html>
 
 <?php
+// Check weather the button is clicked or not
 if(isset($_POST['submit'])){
     
     $title=$_POST['title'];
     $description=$_POST['description'];
     $price=$_POST['price'];
+    $category=$_POST['category'];
 
     // Get data from featured radio input button
     if(isset($_POST['featured'])){
@@ -190,7 +192,7 @@ if(isset($_POST['submit'])){
           description='$description',
           price=$price, 
           image_name='$image_name',
-          category_id='$Id',
+          category_id='$category',
           featured='$featured',
           active='$active'
           "; 

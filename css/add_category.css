@@ -9,7 +9,7 @@
 background-color: #1d2b3a;
 } */
 .container-fluid{
-    background-image: url('../images/bgbg.jpg');
+    background-image: url('../images/hd_search.jpg');
     background-repeat: no-repeat;
     background-size:100% 100%;
     height: 100vh; 
@@ -22,10 +22,10 @@ background-color: #1d2b3a;
 height: auto;
 padding: 35px 35px 35px 35px;
 border-radius: 30px;
-background-color: rgba(0,0,0,0);
-/* box-shadow: 10px 10px 15px  #fcf800,
--10px -10px 15px rgb(176, 252, 0); */
-color: white;
+background-color: rgba(0,0,0,0.03);
+box-shadow: 10px 10px 15px gray,
+-10px -10px 15px rgb(0, 0, 0);
+color: black;
 margin-bottom: 99px;
 margin-left: 400px;
 /* margin-top: 97px; */
@@ -50,7 +50,7 @@ margin-left: 400px;
     color: #fff;
     font-family: poppins;
     font-weight: 400;
-    border: 1.5px solid  #b0fc00;
+    border: 1.5px solid  #00000000;
     letter-spacing: 1.5px;
     cursor: pointer;
     border-radius: 100px;
@@ -72,11 +72,11 @@ margin-left: 400px;
     border-radius: 8px;
     text-align: left;
     background: none;
-    color: white;
+    color: black;
 }
-.field::placeholder{
+/* .field::placeholder{
     color: #b0fc00;
-}
+} */
 i.fa-solid{
     position: relative;
     width: 30px;

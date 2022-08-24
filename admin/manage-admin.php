@@ -1,6 +1,5 @@
  <!-- Include navbar menu -->
 <?php include ('./partials/menu.php');?>
-
     <!-- Main section start here  -->
     <div class="main-content mp-8">
     <?php include('./partials/message.php')?>
@@ -51,8 +50,8 @@
             <td><?php echo $full_name?></td>
             <td><?php echo $username?></td>
             <td>
-              <a href="edit_admin.php?Id=<?php echo $Id;?>" class="btn btn-outline-info btn-sm mx-1">Update Admin</a>
-              <a href="delete_admin.php?Id=<?php echo $Id;?>" class="btn btn-outline-danger btn-sm mx-1">Delete Admin</a>
+              <a href="edit_admin.php?Id=<?php echo $Id;?>" class="btn btn-outline-info"><i class="fa-solid fa-pen-to-square"></i></a>
+              <a href="delete_admin.php?Id=<?php echo $Id;?>" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></a>
             </td>
           </tr>
           <?Php

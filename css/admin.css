@@ -57,6 +57,9 @@
     float: none;
     clear: both;
 }
+.food-img{
+    border-radius: 60%;
+}
 /* .success{
     font-weight: bold;
     background-color:rgb(0, 250, 0);

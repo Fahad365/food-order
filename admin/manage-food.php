@@ -83,8 +83,8 @@
         <td><?php echo $featured?></td>
         <td><?php echo $active?></td>
         <td>
-          <a href="edit_food.php?Id=<?php echo $Id;?>" class="btn btn-outline-info btn-sm mx-1">Update Food</a>
-          <a href="delete_food.php?Id=<?php echo $Id;?>&image_name=<?php echo $image_name;?>" class="btn btn-outline-danger btn-sm mx-1">Delete Food</a>
+          <a href="edit_food.php?Id=<?php echo $Id;?>" class="btn btn-outline-info btn-sm mx-1"><i class="fa-solid fa-pen-to-square"></i> Update Food</a>
+          <a href="delete_food.php?Id=<?php echo $Id;?>&image_name=<?php echo $image_name;?>" class="btn btn-outline-danger btn-sm mx-1"><i class="fa-solid fa-trash-can"></i> Delete Food</a>
         </td>
       </tr>
       <?Php

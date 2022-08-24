@@ -49,7 +49,7 @@
       <div class="swiper-wrapper">
         <!-- Get data from database start -->
         <?php
-            $sql="SELECT * FROM tbl_category WHERE active='yes' AND featured='yes' LIMIT 3";
+            $sql="SELECT * FROM tbl_category WHERE active='yes' AND featured='yes'";
             $result=mysqli_query($conn,$sql);
 
             // Check weather their have category or not
@@ -68,7 +68,7 @@
                   <!-- Front end site code start -->
                   
                   <div class="swiper-slide">
-                  <a href="category-foods.php">
+                  <a href="category-foods.php?category_Id=<?php echo $Id?>">
                         <?php
                         // Check weather img is available or not
                         if($image_name==""){
