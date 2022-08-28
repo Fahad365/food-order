@@ -1,101 +1,136 @@
-
 <?php include ('./partials/menu.php');?>
-    <!-- Main section start here  -->
-    <div class="main-content mp-8">
-    <?php include('./partials/message.php')?>
-        <div class="container-fluid">
-       
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-              <div class="card-header">
-            <h4 class="fw-bold">Update Order Status
-            <!-- <a href="add-admin.php" class="btn btn-dark float-end">Add Admin</a> -->
-            </h4>
+<?php 
+// if(isset($_GET['food_Id'])){
+//     $food_Id=$_GET['food_Id'];
+//     $sql="SELECT * FROM tbl_food WHERE Id='$food_Id'";
+//     $result=mysqli_query($conn,$sql);
+//     $count=mysqli_num_rows($result);
+//             if($count>0){
+//                 $food=mysqli_fetch_assoc($result);
+//                   $title=$food['title'];
+//                   $price=$food['price'];
+//                   $image_name=$food['image_name'];
+//     }else{
+//     //  showing No data found
+//     }
+// }else{
+//     //  showing error message
+// }
+?>
+<!-- Order form section -->
+<section class="food-menu">
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-dark">
+            <h2 class="text-light">Update Order Status</h2>
             </div>
-            <div class="card-body">
-            <table class="table table-dark table-striped text-center align-middle table-hover table-bordered border-light">
-          <thead>
-            <tr class="fw-bold align-middle">
-                <td>SN</td>
-                <td>Food</td>
-                <td>Price</td>
-                <td>Quantity</td>
-                <td>Total Price</td>
-                <td>Order Date</td>
-                <td>Status</td>
-                <td>Customer Name</td>
-                <td>Customer Number</td>
-                <td>Customer Email</td>
-                <td>Customer Address</td>
-                <td>Action</td>
 
-            </tr>
-        </thead>
-        <tbody>
-          <?php
-          // Select all data from admin table from database
-          $sql="SELECT * FROM tbl_order ORDER BY Id DESC";
-          // Execute the Query
-          $result=mysqli_query($conn,$sql);
-          if($result==TRUE){
-            // Count the number of rows to check if their have any data or not 
-              $count=mysqli_num_rows($result);
-
-              // Assign sn=1 to show serially id in UI
-              $serial_number=1;
-
-              if($count>0){
+             <!-- Get data from database start -->
+             <?php
+             $Id=$_GET['Id'];
+            $sql="SELECT * FROM tbl_order WHERE Id=$Id";
+            $result=mysqli_query($conn,$sql);
+            // Check weather their have category or not
+            $count=mysqli_num_rows($result);
+            if($count>0){
                 // we have data in database
-                while($order=mysqli_fetch_assoc($result)){
-                  // using while loop to get data from database 
-                  // It will run as long as their have data 
-                  $Id=$order['Id'];
-                  $food=$order['food'];
-                  $price=$order['price'];
-                  $quantity=$order['qty'];
-                  $total=$order['total'];
-                  $order_date=$order['order_date'];
-                  $status=$order['status'];
-                  $customer_name=$order['customer_name'];
-                  $customer_contact=$order['customer_contact'];
-                  $customer_email=$order['customer_email'];
-                  $customer_address=$order['customer_address'];
+                $food=mysqli_fetch_assoc($result);
+                  $Id=$food['Id'];
+                  $title=$food['food'];
+                  $image_name=$food['image_name'];
+                  $price=$food['price'];
+                  $quantity=$food['qty'];
+                  $total=$food['total'];
+                  $order_date=$food['order_date'];
+                  $status=$food['status'];
+                  $customer_name=$food['customer_name'];
+                  $customer_contact=$food['customer_contact'];
+                  $customer_email=$food['customer_email'];
+                  $customer_address=$food['customer_address'];
+                  ?>
+                  <!-- Get data from database end -->
+                  <?php
+                        if(isset($_SESSION['error'])){
+                            echo $_SESSION['error'];
+                            unset($_SESSION['error']);
+                        }
+                    ?>
+            <div class="card-body">
+                <form action="" method="post">
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <?php
+                        // Check weather img is available or not
+                        if($image_name==""){
+                            echo "<div class='error'>Image Not Available</div>";
+                        }else{
+                    ?>
+                        <!-- Display Image -->
+                        <img src="../images/Food/<?php echo $image_name;?>"  alt="Food Item Name" class="img-responsive img-curve">
+                        <?php
+                        }
+                        ?>
+                </div>
+                <div class="food-menu-desc">
+                    <h3><b><?php echo $title?></b></h3>
+                    <p class="food-price"><b><?php echo $total;?></b></p>
+                    <div class="decoration">
+                    <p class="align-right"><i class="fa-solid fa-user"></i> <?php echo $customer_name;?></p>
+                    <p class="align-right"><i class="fa-solid fa-phone"></i> <?php echo $customer_contact;?></p>
+                    <p class="align-right"><i class="fa-solid fa-clock"></i> <?php echo $order_date;?></p><br>
+                    <p class="text-start"><i class="fa-solid fa-location-dot"></i> <?php echo $customer_address;?></p>
+                    </div>
+                    <!-- <div class="demo">
+                    <p><i class="fa-solid fa-location-dot"></i> <?php /*echo $customer_address;*/?></p>
+                    </div> -->
+                     <br>
+                   
+                </div>
+                <div class="d-grid gap-2 col-2 float-end">
+                <!-- <button name="submit" type="button" class="btn btn-success btn-sm">Delivered</button>
+                <button type="button" class="btn btn-info btn-sm" value="on-delivery">On delivery</button>
+                <button type="button" class="btn btn-danger btn-sm" value="cancel-order">Cancel Order</button> -->
+                <a href="manage-order.php?Id=<?php echo $Id;?>" class="btn btn-info btn-sm " name="submit">Delivered</a>
+                </div>
+            </div>
+                  <?php
+                
+            }else{
+                echo "<div class='error'>No Food Found</div>";
+            }
             ?>
-          <tr>
-            <td><?php echo $serial_number++ ?></td>
-            <td><?php echo $food;?></td>
-            <td><?php echo $price;?></td>
-            <td><?php echo $quantity;?></td>
-            <td><?php echo $total;?></td>
-            <td><?php echo $order_date;?></td>
-            <td><?php echo $status;?></td>
-            <td><?php echo $customer_name;?></td>
-            <td><?php echo $customer_contact;?></td>
-            <td><?php echo $customer_email;?></td>
-            <td><?php echo $customer_address;?></td>
-            <td>
-              <a href="update_order.php?Id=<?php echo $Id;?>" class="btn btn-outline-info btn-sm "><i class="fa-solid fa-pen-to-square"></i>Update Order Status</a>
-              
-            </td>
-          </tr>
-          <?Php
-                }
-              }
-              else{
+            <!-- <div class="clearfix"></div> -->
 
-              }
-          }
-          ?>  
-        </tbody>
-          </table>
+            </form>
             </div>
-              </div>
-            </div>
-          </div>
+            <!-- card body end here -->
         </div>
+        <!-- card end here -->
     </div>
-    <!-- Main section end here  -->
-
-     <!-- Include Footer -->
-<?php include('./partials/footer.php');?>
+    <!-- Container End here -->
+    <?php 
+    if(isset($_POST['submit'])){
+        // $Id=$Id;
+        $status= "Delivered";
+        $sql="UPDATE tbl_order SET status='$status' WHERE Id='$Id'";
+        $result=mysqli_query($conn,$sql);
+        if($result){
+            $_SESSION['message']="Updated Successfully";
+            ?>
+            <script>
+                window.location.href='manage-order.php';
+                </script>
+                <?php
+            exit(0);
+            }else{
+            $_SESSION['error']="<div class='error'>Something Wrong!</br>Try Again</div>";
+            ?>
+            <script>
+            window.location.href='add_food.php';
+            </script>
+            <?php
+            exit(0);
+                }
+    }
+    ?>
+</section>
