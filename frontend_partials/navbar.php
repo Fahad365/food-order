@@ -40,6 +40,16 @@
                     </li> -->
                 </ul>
             </div>
+            <script type="text/javascript">
+                const currentLocation=location.href;
+                const menuItem=document.querySelectorAll('a');
+                const menuLength= menuItem.length
+                for(let i=0; i<menuLength; i++){
+                    if(menuItem[i].href===currentLocation){
+                        menuItem[i].className="active"
+                    }
+                }
+            </script>
 
             <div class="clearfix"></div>
         </div>

@@ -42,7 +42,7 @@
 /* Admin dashboard/main content CSS */
 .main-content{
    background-color: aliceblue;
-   padding: 3%;
+   /* padding: 3%; */
 }
 .col-4{
     width: 18%;
@@ -114,7 +114,7 @@
 .img-curve{
     border-radius: 15px;
 }
-.align-right{
+.text-start{
     float: left;
     padding-right: 4%;
 }
@@ -122,9 +122,40 @@
     float: right;
     margin-left: -420px;
 }
+
 .decoration{
     margin-bottom: 5px;
 }
+.btn-danger,.btn-info,.btn-success{
+    width:150px;
+    /* border-radius: 70px; */
+    font-weight: bold;
+    /* color: black; */
+    font-size: medium;
+}
+.btn-info{
+    color: white;
+}
+.ordered{
+    color: #ff6b81;
+    font-weight: bold;
+}
+.delivered{
+    color:lawngreen;
+    font-weight: bold;
+}
+.on-delivery{
+    color: deepskyblue;
+    font-weight: bold;
+}
+.cancel{
+    color: red;
+    font-weight: bold;
+}
+
+/* .col-3{
+    width: 20%;
+} */
 /* .card{
     width: 100%;
 } */

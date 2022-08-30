@@ -27,8 +27,9 @@
 
              <!-- Get data from database start -->
              <?php
-             $Id=$_GET['Id'];
-            $sql="SELECT * FROM tbl_order WHERE Id=$Id";
+            // $Id = isset($_GET['id']) ? $_GET['id'] : '';
+            $Id=$_GET['Id'];
+            $sql="SELECT * FROM tbl_order WHERE Id='$Id'";
             $result=mysqli_query($conn,$sql);
             // Check weather their have category or not
             $count=mysqli_num_rows($result);
@@ -56,52 +57,54 @@
                         }
                     ?>
             <div class="card-body">
-                <form action="" method="post">
-            <div class="food-menu-box">
-                <div class="food-menu-img">
-                    <?php
-                        // Check weather img is available or not
-                        if($image_name==""){
-                            echo "<div class='error'>Image Not Available</div>";
-                        }else{
-                    ?>
-                        <!-- Display Image -->
-                        <img src="../images/Food/<?php echo $image_name;?>"  alt="Food Item Name" class="img-responsive img-curve">
-                        <?php
-                        }
-                        ?>
-                </div>
-                <div class="food-menu-desc">
-                    <h3><b><?php echo $title?></b></h3>
-                    <p class="food-price"><b><?php echo $total;?></b></p>
-                    <div class="decoration">
-                    <p class="align-right"><i class="fa-solid fa-user"></i> <?php echo $customer_name;?></p>
-                    <p class="align-right"><i class="fa-solid fa-phone"></i> <?php echo $customer_contact;?></p>
-                    <p class="align-right"><i class="fa-solid fa-clock"></i> <?php echo $order_date;?></p><br>
-                    <p class="text-start"><i class="fa-solid fa-location-dot"></i> <?php echo $customer_address;?></p>
-                    </div>
-                    <!-- <div class="demo">
-                    <p><i class="fa-solid fa-location-dot"></i> <?php /*echo $customer_address;*/?></p>
-                    </div> -->
-                     <br>
-                   
-                </div>
-                <div class="d-grid gap-2 col-2 float-end">
-                <!-- <button name="submit" type="button" class="btn btn-success btn-sm">Delivered</button>
-                <button type="button" class="btn btn-info btn-sm" value="on-delivery">On delivery</button>
-                <button type="button" class="btn btn-danger btn-sm" value="cancel-order">Cancel Order</button> -->
-                <a href="manage-order.php?Id=<?php echo $Id;?>" class="btn btn-info btn-sm " name="submit">Delivered</a>
-                </div>
-            </div>
+                <div class="row">
+                    <form action="" method="post">
+                        <div class="food-menu-box">
+                                <div class="food-menu-img col-2">
+                                    <?php
+                                        // Check weather img is available or not
+                                        if($image_name==""){
+                                            echo "<div class='error'>Image Not Available</div>";
+                                        }else{
+                                    ?>
+                                        <!-- Display Image -->
+                                        <img src="../images/Food/<?php echo $image_name;?>"  alt="Food Item Name" class="img-responsive img-curve">
+                                        <?php
+                                        }
+                                        ?>
+                                </div>
+                                <div class="food-menu-desc col-6">
+                                    <h3><b><?php echo $title?></b></h3>
+                                    <p class="food-price"><b><?php echo $total;?></b></p>
+                                    <div class="decoration">
+                                    <p class="align-right"><i class="fa-solid fa-user"></i> <?php echo $customer_name;?></p>
+                                    <p class="align-right"><i class="fa-solid fa-phone"></i> <?php echo $customer_contact;?></p>
+                                    <p class="align-right"><i class="fa-solid fa-clock"></i> <?php echo $order_date;?></p><br>
+                                    <p class="text-start"><i class="fa-solid fa-location-dot"></i> <?php echo $customer_address;?></p>
+                                    </div>
+                                    <!-- <div class="demo">
+                                    <p><i class="fa-solid fa-location-dot"></i> <?php /*echo $customer_address;*/?></p>
+                                    </div> -->
+                                    <br>
+                                
+                                </div>
+                                <div class="d-grid gap-2 col-3 float-end">
+                                <button name="submit" type="button" class="btn btn-success btn-sm">Delivered</button>
+                                <button type="button" class="btn btn-info btn-sm" value="on-delivery">On delivery</button>
+                                <button type="button" class="btn btn-danger btn-sm" value="cancel-order">Cancel Order</button>
+                                <!-- <a href="manage-order.php?Id=<?php echo $Id;?>" class="btn btn-info btn-sm " name="submit">Delivered</a> -->
+                                </div>
+                        </div>
                   <?php
                 
-            }else{
-                echo "<div class='error'>No Food Found</div>";
-            }
-            ?>
-            <!-- <div class="clearfix"></div> -->
+                        }else{
+                            echo "<div class='error'>No Food Found</div>";
+                        }
+                        ?>
+                        <!-- <div class="clearfix"></div> -->
 
-            </form>
+                </form>
+                </div>
             </div>
             <!-- card body end here -->
         </div>

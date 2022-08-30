@@ -87,7 +87,7 @@ if(isset($_GET['food_Id'])){
         $qty=$_POST['qty'];
         $total=$price*$qty;
         $order_date=date("y-m-d h:i:sa").date_default_timezone_set("Asia/Dhaka");
-        $status="ordered";  //ordered,delivered,cancel,on delivery
+        $status="Ordered";  //ordered,delivered,cancel,on delivery
         $customer_name=$_POST['full-name'];
         $customer_contact=$_POST['contact'];
         $customer_email=$_POST['email'];

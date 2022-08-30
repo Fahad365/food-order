@@ -2,7 +2,7 @@
 <!-- Include navbar menu -->
 <?php include ('./partials/menu.php');?>
     <!-- Main section start here  -->
-    <div class="main-content mp-8">
+    <div class="main-content py-2"><br>
     <?php include('./partials/message.php')?>
         <div class="container-fluid">
        
@@ -86,14 +86,26 @@
             <td><?php echo $quantity;?></td>
             <td><?php echo $total;?></td>
             <td><?php echo $order_date;?></td>
-            <td><?php echo $status;?></td>
+            <td>
+              <?php
+              if($status=="Ordered"){
+                echo "<div class='ordered'>$status</div>";
+              }elseif($status=="Delivered"){
+                echo "<div class='delivered'>$status</div>";
+              }elseif($status=="On-delivery"){
+                echo "<div class='on-delivery'>$status</div>";
+              }elseif($status=="Cancel-Order"){
+                echo "<div class='cancel'>$status</div>";
+              }
+              ?>
+            </td>
             <td><?php echo $customer_name;?></td>
             <td><?php echo $customer_contact;?></td>
             <td><?php echo $customer_email;?></td>
             <td><?php echo $customer_address;?></td>
             <td>
-              <a href="update_order.php?Id=<?php echo $Id;?>" class="btn btn-outline-info btn-sm "><i class="fa-solid fa-pen-to-square"></i>Update Order Status</a>
-              
+              <a href="order_status.php?Id=<?php echo $Id;?>" class="btn btn-outline-info btn-sm "><i class="fa-solid fa-pen-to-square"></i>Update Order Status</a><br>
+              <a href="delete_order.php?Id=<?php echo $Id;?>" class="btn btn-outline-danger btn-sm "><i class="fa-solid fa-trash-can"></i>Delete Order</a>
             </td>
           </tr>
           <?Php
