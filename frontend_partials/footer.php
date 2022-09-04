@@ -19,7 +19,7 @@
     <!-- footer Section Starts Here -->
     <section class="footer">
         <div class="container text-center">
-            <p>All rights reserved. Designed By <a href="#">Fahad Hossain</a></p>
+            <p>All rights reserved. Designed By <span style="color:blue;">Fahad Hossain</span></p>
         </div>
     </section>
     <!-- footer Section Ends Here -->

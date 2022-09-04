@@ -47,7 +47,7 @@ a{
 .btn{
     padding: 1%;
     border: none;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     border-radius: 5px;
 }
 .btn-primary{
@@ -57,7 +57,7 @@ a{
 }
 .btn-primary:hover{
     color: white;
-    background-color: #ff4757;
+    /* background-color: #ff4757; */
 }
 h2{
     color: #2f3542;
@@ -98,7 +98,8 @@ body{
 	animation: slideIn .5s forwards;
 }
 .menu{
-    line-height: 110px;
+    line-height: 100px;
+    
 }
 .menu ul{
     list-style-type: none;
@@ -113,13 +114,6 @@ body{
     /* transform: translateX(100rem);
     animation: slideIn .5s forwards; */
 }
-/* .menu ul{
-    display: inline;
-    padding: 1%;
-    font-weight: bold;
-    transform: translateX(100rem);
-    animation: slideIn .5s forwards;
-} */
 .menu ul li a.active{
     background:#383d46;
 }
@@ -133,6 +127,10 @@ body{
     padding: 8px 15px;
     border-radius: 13%;
 
+}
+a:active,a:hover{
+    /* outline-style: none; */
+    color: #ff6b81;
 }
 .menu ul li a::before,
 .menu ul li a::after{
@@ -158,6 +156,7 @@ body{
 .menu ul li a:hover::before,
 .menu ul li a:hover::after{
     transform: scaleX(1);
+    text-decoration: none;
 }
 @keyframes slideIn {
 	from{
@@ -198,7 +197,7 @@ body{
     /* background-color: black; */
 }
 /* Order Form CSS */
-.container-fluid{
+.form-bg{
     /* background-image: url(../images/form.jpg); */
     background-color: #1d2b3a;
     background-size: 100% 100%;

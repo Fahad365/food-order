@@ -52,7 +52,6 @@ include ('./partials/menu.php');?>
     if(empty($fullname) || empty($username) || empty($password)){
         $_SESSION['message']="You have to fill this";
         ?>
-        <!-- header("Location:add-admin.php"); -->
         <script>
          window.location.href='add-admin.php';
         </script>
@@ -71,7 +70,6 @@ include ('./partials/menu.php');?>
          <script>
          window.location.href='manage-admin.php';
         </script>
-        <!-- header("Location:add-admin.php"); -->
         <?php
         exit(0);
     }

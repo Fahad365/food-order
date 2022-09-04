@@ -21,7 +21,7 @@ if(isset($_GET['food_Id'])){
 
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-order">
-        <div class="container-fluid">
+        <div class="form-bg">
             
             <h2 class="text-center order-heading">Fill this form to confirm your order</h2>
 

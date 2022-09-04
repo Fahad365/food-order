@@ -9,8 +9,8 @@
 <body>
       <!-- Footer section start here  -->
       <div class="footer">
-        <div class="wrapper">
-            <p class="text-center">All Right reserved by Hot Grilll</br><span style="color: black;">Developed by</span> <a href="#">Fahad Hossain</a></p>
+        <div>
+            <p class="text-center">All Right reserved by Hot Grilll</br> Developed by<span style="color:aqua;"> Md Fahad Hossain</span></p>
         </div>
     </div>
     <!-- Footer section end here  -->

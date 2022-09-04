@@ -25,6 +25,7 @@
     }
   </style>
     <!-- fOOD sEARCH Section Starts Here -->
+    <?php include('./admin/partials/message.php')?>
     <section class="food-search text-center">
         <div class="container">
             
@@ -35,7 +36,7 @@
 
         </div>
     </section>
-    <?php include('./admin/partials/message.php')?>
+   
     <?php
         if(isset($_SESSION['error'])){
             echo $_SESSION['error'];
