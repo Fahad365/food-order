@@ -2,7 +2,7 @@
 <?php include ('./partials/menu.php');?>
     <!-- Main section start here  -->
     <div class="main-content mp-8">
-    <?php include('./partials/message.php')?>
+    
         <div class="container">
        
           <div class="row">
@@ -72,7 +72,7 @@
     </div>
     <!-- Main section end here  -->
 
-     <!-- Include Footer -->
-<?php include('./partials/footer.php');?>
-<!-- </body>
-</html> -->
+    <!-- Include sweet alart messege -->
+     <?php include('./script.php')?>
+      <!-- Include Footer -->
+    <?php include('./partials/footer.php');?>

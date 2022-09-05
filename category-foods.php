@@ -30,13 +30,13 @@
     <section class="food-menu">
         <div class="container">
             <h2 class="text-center">Food Menu</h2>
-
             <?php 
             $sql="SELECT * FROM tbl_food WHERE category_id=$category_Id";
             $result=mysqli_query($conn,$sql);
             $count=mysqli_num_rows($result);
             if($count>0){
                 while($category=mysqli_fetch_assoc($result)){
+                    $Id=$category['Id'];
                     $title=$category['title'];
                     $price=$category['price'];
                     $description=$category['description'];
@@ -66,7 +66,7 @@
                             <?php echo $description;?>
                         </p>
                         <br>
-                        <a href="order.php?food_Id=<?php echo $Id;?>" class="btn btn-primary">Order Now</a>
+                        <a href="order.php?food_Id=<?php echo $Id;?>" class="btn btn-search">Order Now</a>
                         </div>
                     </div>
                     <?php

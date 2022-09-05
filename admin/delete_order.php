@@ -13,7 +13,7 @@ $result=mysqli_query($conn,$sql);
 
 // Redirect to manage admin page with messege
 if($result==TRUE){
-    $_SESSION['message']="Order Deleted Successfully ✔";
+    $_SESSION['message']="Order Deleted Successfully ";
     ?>
      <script>
      window.location.href='manage-order.php';

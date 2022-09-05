@@ -11,14 +11,13 @@ $sql="DELETE FROM tbl_admin WHERE Id=$Id";
 // Execute the query
 $result=mysqli_query($conn,$sql);
 
-// Redirect to manage admin page with messege
+// Redirect to manage admin page with sweet alart messege
 if($result==TRUE){
-    $_SESSION['message']="Admin Deleted Successfully ✔";
+    $_SESSION['message']="Admin Deleted Successfully";
     ?>
      <script>
      window.location.href='manage-admin.php';
     </script>
-    <!-- header("Location:add-admin.php"); -->
     <?php
     exit(0);
 }

@@ -27,7 +27,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     
-                                    <button type="submit" name="filter" class="btn btn-info">Filter</button>
+                                    <button type="submit" name="filter" class="btn btn-primary py-2">Filter</button>
                                 </div>
                             </div>
                         </div>

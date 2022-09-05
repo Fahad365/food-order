@@ -55,7 +55,7 @@
                                 <?php echo $description;?>
                             </p>
                             <br>
-                            <a href="#" class="btn btn-primary">Order Now</a>
+                            <a href="order.php?food_Id=<?php echo $Id;?>" class="btn btn-search">Order Now</a>
                         </div>
                   </div>
                 <?php

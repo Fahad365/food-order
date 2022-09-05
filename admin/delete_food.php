@@ -28,7 +28,7 @@ if(isset($_GET['Id']) && (isset($_GET['image_name']))){
     $result=mysqli_query($conn,$sql);
 
     if($result==true){
-        $_SESSION['message']="Food Item Deleted successfully✅";
+        $_SESSION['message']="Food Item Deleted Successfully";
         ?>
         <script>
          window.location.href='manage-food.php';

@@ -47,7 +47,7 @@
                   <!-- Front end site code start -->
                   
                   <div class="swiper-slide">
-                  <a href="category-foods.php">
+                  <a href="category-foods.php?category_Id=<?php echo $Id;?>">
                         <?php
                         // Check weather img is available or not
                         if($image_name==""){

@@ -4,7 +4,7 @@ include ('./partials/menu.php');?>
 
 <!-- Create form to add Admin -->
 <div class="container mt-5">
-    <?php include('./partials/message.php')?>
+   
     <div class="row">
         <div class="col-mb-8">
             <div class="card">
@@ -65,7 +65,7 @@ include ('./partials/menu.php');?>
     $result=mysqli_query($conn,$sql) or die(mysqli_connect_error());
 
     if($result){
-        $_SESSION['message']="Admin Created Successfully✔";
+        $_SESSION['message']="Admin Created Successfully";
         ?>
          <script>
          window.location.href='manage-admin.php';

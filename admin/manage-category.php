@@ -12,9 +12,7 @@
 
 <!-- Main section start here  -->
 <div class="main-content md-8">
-<?php include('./partials/message.php')?>
     <div class="container">
-   
       <div class="row">
         <div class="col-md-12">
           <div class="card">
@@ -107,6 +105,8 @@
     </div>
 </div>
 <!-- Main section end here  -->
+ <!-- Include sweet alart messege -->
+ <?php include('./script.php')?>
 
  <!-- Include Footer -->
 <?php include('./partials/footer.php');?>

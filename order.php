@@ -69,7 +69,7 @@ if(isset($_GET['food_Id'])){
                     <div class="order-label">Address</div>
                     <textarea name="address" rows="10" placeholder="E.g. Street, City, Country" class="input-responsive" required></textarea>
 
-                    <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
+                    <input type="submit" name="submit" value="Confirm Order" class="btn btn-search">
                 </fieldset>
 
             </form>
@@ -102,7 +102,7 @@ if(isset($_GET['food_Id'])){
         $result2=mysqli_query($conn,$sql);
          // Check weather the query is successfully execute or not
         if($result2==true){
-            $_SESSION['message']="Order place successfully✅";
+            $_SESSION['message']="Order place successfully";
             ?>
             <script>
              window.location.href='index.php';
@@ -122,4 +122,6 @@ if(isset($_GET['food_Id'])){
         // echo "something wrong";
     }
     ?>
+    <!-- Include sweet alart messege -->
+  
     <?php include('./frontend_partials/footer.php');?>

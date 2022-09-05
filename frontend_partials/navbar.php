@@ -33,7 +33,7 @@
                         <a href="foods.php">Foods</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="contact_us.php">Contact</a>
                     </li>
                     <!-- <li>
                         <a href="admin/login.php">Admin</a>

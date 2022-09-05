@@ -28,7 +28,7 @@ if(isset($_GET['Id']) && (isset($_GET['image_name']))){
     $result=mysqli_query($conn,$sql);
 
     if($result==true){
-        $_SESSION['message']="Category Deleted successfully✅";
+        $_SESSION['message']="Category Deleted successfully";
         ?>
         <script>
          window.location.href='manage-category.php';
@@ -44,7 +44,5 @@ if(isset($_GET['Id']) && (isset($_GET['image_name']))){
         <?php
         exit(0);
     }
-
-    // Redirect to manage category page with messege
 }
-?>
+        ?>

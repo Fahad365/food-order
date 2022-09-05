@@ -202,7 +202,7 @@ if(isset($_POST['submit'])){
 
     // Check weather the query is successfully execute or not
     if($result==true){
-        $_SESSION['message']="Food added successfully✅";
+        $_SESSION['message']="Food Added Successfully";
         ?>
         <script>
          window.location.href='manage-food.php';

@@ -3,7 +3,6 @@
 <?php include ('./partials/menu.php');?>
     <!-- Main section start here  -->
     <div class="main-content py-2"><br>
-    <?php include('./partials/message.php')?>
         <div class="container-fluid">
        
           <div class="row">
@@ -126,5 +125,7 @@
     </div>
     <!-- Main section end here  -->
 
+ <!-- Include sweet alart messege -->
+ <?php include('./script.php')?>
      <!-- Include Footer -->
-<?php include('./partials/footer.php');?>
+ <?php include('./partials/footer.php');?>

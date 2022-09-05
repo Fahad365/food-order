@@ -4,12 +4,11 @@ include ('./partials/menu.php');?>
 
 <!-- Create form to add Admin -->
 <div class="container mt-5">
-    <?php include('./partials/message.php')?>
     <div class="row">
         <div class="col-mb-8">
             <div class="card">
                 <div class="card-header ">
-                    <h4 class="fw-bold">Add Admin
+                    <h4 class="fw-bold">Update Admin Info
                         <a href="manage-admin.php" class="btn btn-dark float-end">Back</a>
                     </h4>
                 </div>
@@ -39,7 +38,7 @@ include ('./partials/menu.php');?>
                             <input type="text" name="username" class="form-control" value="<?=$admin['username'];?>" placeholder="Enter Your Username Here">
                         </div>
                         <div class="mb-3">
-                            <button type="submit" name="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" name="submit" class="btn btn-primary">Update</button>
                         </div>
                     </form>
                     <?php
