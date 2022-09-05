@@ -38,6 +38,7 @@ include('login_check.php');
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Admin navbar active part js -->
+    <script src="/JS/sweetalert.min.js"></script>
     <script type="text/javascript">
                 const currentLocation=location.href;
                 const menuItem=document.querySelectorAll('a');

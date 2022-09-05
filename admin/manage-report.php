@@ -51,11 +51,12 @@
   
                 ?>
             <div class="card mt-4">
-                <div class="card-body">
-                    <table class="table text-center align-middle  table-bordered border-dark">
+                <div class="card-body" id="exportid">
+                    <table class="table text-center align-middle  table-bordered border-dark"  border="1">
                     <?php
+                    $hasData = mysqli_num_rows($result)>0;
                     //  Check weather their have data or not in DB
-                    if(mysqli_num_rows($result)>0){
+                    if($hasData){
                     ?>
                         <thead class="table-secondary table-bordered border-dark">
                             <tr class="fw-bold align-middle">
@@ -103,11 +104,20 @@
                             ?>
                         </tbody>
                     </table>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <!-- <button class="btn btn-primary me-md-2" type="button">Button</button> -->
-                        <button class="btn btn-dark" type="button">Print</button>
-                        </div>
                 </div>
+                
+                <?php
+                    //  Check weather their have data or not in DB
+                    if($hasData){
+                    ?>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <form action="../exportpdf.php" method="POST">
+                            <input type="hidden"  id="inhtml" name="html"/>
+                            <button type="submit" class="btn btn-dark px-3 mx-3 mb-4" onclick="myFunction()">Export</button>
+                        </form>
+                    </div><?php
+                }
+                            ?>
             </div>
             <!-- Output card end -->
                 <?php
@@ -117,4 +127,12 @@
         </div>
     </div>
 </div>
+<script>
+function myFunction() {
+  var html = document.getElementById("exportid").innerHTML;
+  document.getElementById("inhtml").value = html;
+  //alert(document.getElementById("inhtml").value);
+  //return false;
+}
+</script>
 <!-- Include Footer -->

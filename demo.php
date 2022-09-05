@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <form class="offset-md-3 col-md-6">
+        <form action="makepdf.php" method="POST" class="offset-md-3 col-md-6">
             <h1>Generate PDF</h1>
             <div class="row mb-3">
                 <div class="col-md-6">
