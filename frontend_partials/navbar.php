@@ -33,11 +33,8 @@
                         <a href="foods.php">Foods</a>
                     </li>
                     <li>
-                        <a href="contact_us.php">Contact</a>
+                        <a href="contact_us.php">Contact Us</a>
                     </li>
-                    <!-- <li>
-                        <a href="admin/login.php">Admin</a>
-                    </li> -->
                 </ul>
             </div>
             <script type="text/javascript">

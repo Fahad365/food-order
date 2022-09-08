@@ -109,7 +109,7 @@ body{
 
 .menu ul li{
     display: inline;
-    padding: 1%;
+    /* padding: 1%; */
     font-weight: bold;
     /* transform: translateX(100rem);
     animation: slideIn .5s forwards; */
@@ -239,6 +239,7 @@ a:active,a:hover{
     /* border: 2px solid rgb(255, 51, 129);
     box-shadow: 2px 3px 5px  rgb(236, 143, 216),
     -2px -3px 5px rgb(78, 77, 71); ; */
+    
 }
 
 .food-menu-img{

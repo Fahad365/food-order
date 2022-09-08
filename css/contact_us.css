@@ -9,7 +9,7 @@
 body{
   min-height: 100vh;
   width: 100%;
-  background: #c8e8e9;
+  background: #1d2b3a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@ body{
   background: #fff;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px #ff6b81;
 }
 .container .content{
   display: flex;
@@ -62,7 +62,7 @@ body{
 .content .left-side .details .text-one,
 .content .left-side .details .text-two{
   font-size: 14px;
-  color: #afafb6;
+  color: #525255;
 }
 
 
@@ -87,7 +87,9 @@ body{
   border: none;
   outline: none;
   font-size: 16px;
-  background: #F0F1F8;
+  background: #1d2b3a;
+  color: #ffffff;
+  font-weight: 500;
   border-radius: 6px;
   padding: 0 15px;
   resize: none;
@@ -98,7 +100,36 @@ body{
 .right-side .input-box textarea{
   padding-top: 6px;
 }
-.right-side .button{
+.send_btn{
+  display: inline-block;
+  margin-top: 12px;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #3e2093;
+  cursor: pointer;
+}
+.fa-star{
+  color: #1d2b3a;
+  border: none;
+  font-size: large;
+}
+/* cod eof hide radio btn circel */
+.star-rating input{
+   appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+.fa-star:checked{
+  color: #ff6b81;
+}
+.bold{
+  font-weight: 500;
+}
+/* .right-side .button{
   display: inline-block;
   margin-top: 12px;
 }
@@ -115,7 +146,7 @@ body{
 }
 .button input[type="button"]:hover{
   background: #5029bc;
-}
+} */
 
 @media (max-width: 950px) {
   .container{

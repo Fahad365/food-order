@@ -135,7 +135,7 @@ Nilesh Dadheech  -->
                         <?php
                         }
                         ?>
-                </div>
+                    </div>
                     <div class="food-menu-desc">
                     <h4><?php echo $title?></h4>
                     <p class="food-price"><?php echo $price;?></p>
@@ -162,7 +162,7 @@ Nilesh Dadheech  -->
         </p>
     </section>
     <!-- fOOD Menu Section Ends Here -->
-
+  
    <?php include('./frontend_partials/footer.php');?>
 <script src="JS/script.js"></script>
 <!-- Swiper slider js -->

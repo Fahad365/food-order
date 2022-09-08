@@ -43,44 +43,6 @@
     border-radius: 60%;
 }
 
-/* write this part of css from style.css */
-.food-menu{
-    background-color: #ececec;
-    padding: 4% 0;
-}
-.food-menu-box{
-    width: 80%;
-    margin: 1%;
-    padding: 2%;
-    float: left;
-    background-color: white;
-    border-radius: 15px;
-}
-
-.food-menu-img{
-    width: 20%;
-    float: left;
-    height: auto;
-}
-
-.food-menu-desc{
-    width: 60%;
-    float: left;
-    /* margin-left: 1%; */
-    margin: auto;
-    align-content: space-between;
-    /* padding-left: 6%; */
-}
-
-.food-price{
-    font-size: 1.2rem;
-    margin: 0% 0;
-    width: 200px;
-}
-.food-detail{
-    font-size: 1rem;
-    color: #747d8c;
-}
 .container{
     width: auto;
     margin: 0 auto;
@@ -144,22 +106,3 @@
     font-weight: bold;
 }
 
-/* .col-3{
-    width: 20%;
-} */
-/* .card{
-    width: 100%;
-} */
-/* .d-grid{
-    float: right;
-} */
-/* .btn-primary{
-    float: right;
-    margin-top: -135px;
-} */
-
-/* end here */
-/* .success{
-    font-weight: bold;
-    background-color:rgb(0, 250, 0);
-} */
