@@ -136,3 +136,4 @@ function myFunction() {
 }
 </script>
 <!-- Include Footer -->
+<?php include('./partials/footer.php');?>

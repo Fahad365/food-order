@@ -1,125 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Poppins',sans-serif;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 /* body{
 background-color: #1d2b3a;
 } */
-.container-fluid{
-    background-image: url('../images/hd_search.jpg');
-    background-repeat: no-repeat;
-    background-size:100% 100%;
-    height: 100vh; 
-    background-position: center;
-    padding-top: 150px;
-
+.container-fluid {
+  background-image: url("../images/category_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  background-position: center;
+  padding-top: 150px;
 }
-.card{
-    width: 512px;
-height: auto;
-padding: 35px 35px 35px 35px;
-border-radius: 30px;
-background-color: rgba(0,0,0,0.03);
-box-shadow: 10px 10px 15px gray,
--10px -10px 15px rgb(0, 0, 0);
-color: black;
-margin-bottom: 99px;
-margin-left: 400px;
-/* margin-top: 97px; */
+.card {
+  width: 512px;
+  height: auto;
+  padding: 35px 35px 35px 35px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.03);
+  box-shadow: 10px 10px 15px gray, -10px -10px 15px rgb(0, 0, 0);
+  color: black;
+  margin-bottom: 99px;
+  margin-left: 400px;
+  /* margin-top: 97px; */
 }
 .card-header {
-    padding: 0.5rem 1rem;
-    margin-top: -35px;
-    background-color: rgba(0,0,0,.03);
+  padding: 0.5rem 1rem;
+  margin-top: -35px;
+  background-color: rgba(0, 0, 0, 0.03);
 }
-.box{
-    padding: 4px 15px 8px 45px;
+.box {
+  padding: 4px 15px 8px 45px;
 }
-.lg_button{
-    position: relative;
-    text-align: center;
-    width: 100px;
-    margin-left: -21px;
-    margin-top: 10px;
-    /* padding: 40px; */
-    font-size: 15px;
-    background: #1d2b3a;
-    color: #fff;
-    font-family: poppins;
-    font-weight: 400;
-    border: 1.5px solid  #00000000;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    border-radius: 100px;
-    text-transform: uppercase;
-    transition: 1.5s;
+.lg_button {
+  position: relative;
+  text-align: center;
+  width: 100px;
+  margin-left: -21px;
+  margin-top: 10px;
+  /* padding: 40px; */
+  font-size: 15px;
+  background: #1d2b3a;
+  color: #fff;
+  font-family: poppins;
+  font-weight: 400;
+  border: 1.5px solid #00000000;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border-radius: 100px;
+  text-transform: uppercase;
+  transition: 1.5s;
 }
-.lg_button:hover{
-    box-shadow: 0 0px 10px #b0fc00 inset, 0 0px 10px 0 #b0fc00,
-    0 0px 10px #b0fc00 inset, 0 0px 10px 0  #fcf800;
-    /* text-shadow: 0 0 1px  #fcf800,0 0 1px  #fcf800; */
+.lg_button:hover {
+  box-shadow: 0 0px 10px #b0fc00 inset, 0 0px 10px 0 #b0fc00,
+    0 0px 10px #b0fc00 inset, 0 0px 10px 0 #fcf800;
+  /* text-shadow: 0 0 1px  #fcf800,0 0 1px  #fcf800; */
 }
-.box input{
-    appearance: none;
-    -webkit-appearance: none;
-    cursor: pointer;
-    
+.box input {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
 }
-.field{
-    border-radius: 8px;
-    text-align: left;
-    background: none;
-    color: black;
+.field {
+  border-radius: 8px;
+  text-align: left;
+  background: none;
+  color: black;
 }
 /* .field::placeholder{
     color: #b0fc00;
 } */
-i.fa-solid{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background: #162d38;
-    line-height: 30px;
-    text-align: center;
-    margin: 0 4px;
-    color: #fbfbfb;
-    font-size: 16px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: -1px -1px 3px rgba(255,255,255,0.9),
-    2px 2px 6px rgba(255,213,213,0.4);
+i.fa-solid {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #162d38;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 4px;
+  color: #fbfbfb;
+  font-size: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.9),
+    2px 2px 6px rgba(255, 213, 213, 0.4);
 }
-.box .fa-solid:hover{
-    box-shadow: -1px -1px 3px rgba(29, 43, 58,0.7),
-    2px 2px 6px rgba(0,0,0,0.8),
-    inset -2px -2px 10px rgba(29, 43, 58,0.7),
-    inset 2px 2px 10px rgba(255,213,213,0.9);
+.box .fa-solid:hover {
+  box-shadow: -1px -1px 3px rgba(29, 43, 58, 0.7),
+    2px 2px 6px rgba(0, 0, 0, 0.8), inset -2px -2px 10px rgba(29, 43, 58, 0.7),
+    inset 2px 2px 10px rgba(255, 213, 213, 0.9);
 }
-.box label input:checked ~ .fa-check{
-color:rgb(38, 255, 49);
-box-shadow: inset -1px -1px 3px rgba(81, 255, 0, 0.973),
+.box label input:checked ~ .fa-check {
+  color: rgb(38, 255, 49);
+  box-shadow: inset -1px -1px 3px rgba(81, 255, 0, 0.973),
     inset 2px 2px 6px rgba(81, 255, 0, 0.973);
-    /* text-shadow: 0 0 5px rgb(0, 0, 0),
+  /* text-shadow: 0 0 5px rgb(0, 0, 0),
                  0 0 20px rgb(0, 0, 0); */
 }
-.box label input:checked ~ .fa-xmark{
-    color:rgb(255, 0, 0);
-    box-shadow: inset -1px -1px 3px rgba(255, 0, 0, 0.932),
-        inset 2px 2px 6px rgba(255, 0, 0, 0.932);
-        /* text-shadow: 0 0 5px rgb(0, 0, 0),
+.box label input:checked ~ .fa-xmark {
+  color: rgb(255, 0, 0);
+  box-shadow: inset -1px -1px 3px rgba(255, 0, 0, 0.932),
+    inset 2px 2px 6px rgba(255, 0, 0, 0.932);
+  /* text-shadow: 0 0 5px rgb(0, 0, 0),
                      0 0 20px rgb(0, 0, 0); */
-    }
-.error{
-    color:white;
-    font-weight: 400;
-    text-align: center;
-    text-shadow: 2px 2px 5px red,2px 2px 5px red;
-    
-    }
-    /* .lg_button:checked{
+}
+.error {
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 2px 2px 5px red, 2px 2px 5px red;
+}
+/* .lg_button:checked{
         width: 512px;
 height: 420px;
 padding: 60px 35px 35px 35px;
@@ -130,4 +125,4 @@ background-color: rgba(0,0,0,0.2);
 /* color: white; */
 /* margin-bottom: 99px;
 margin-left: 400px; */
-    /* } */ 
+/* } */

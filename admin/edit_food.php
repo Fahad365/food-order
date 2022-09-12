@@ -258,4 +258,3 @@ else{
 }        
 ?> 
 
-<?php include('./partials/footer.php');?>

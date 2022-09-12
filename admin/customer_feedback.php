@@ -1,10 +1,12 @@
-<!-- Include Nav Ber -->
 <?php include ('./partials/menu.php');?>
+<!-- Include Nav Ber -->
+
 <section class="review">
     <div class="container">
         
         <h2 class="text-center">Customer Reviews</h2>
         <!-- Get data from database start -->
+        <div class="row">
         <?php
             $sql="SELECT * FROM tbl_contact";
             $result=mysqli_query($conn,$sql);
@@ -23,68 +25,74 @@
                   $rating=$review['rating'];
         ?>
                   <!-- Get data from database end -->
-        <div class="food-menu-box">
-            <div class="food-menu-desc">
-                <div class="row-2">
-                <h4 class="text-start"><?php echo $customer_name;?></h4>
-                <p class="text-end">
-                    <?php 
-                    if($review['rating']==1){
-                        ?>
-                        <span class="fa-solid fa-star"></span>
-                        <?php 
-                        }
-                        ?>
-                        <?php 
-                    if($review['rating']==2){
-                        ?>
-                        <span class="fa-solid fa-star"></span>
-                        <span class="fa-solid fa-star"></span>
-                        <?php 
-                        }
-                        ?>
-                        <?php 
-                    if($review['rating']==3){
-                        ?>
-                        <span class="fa-solid fa-star"></span>
-                        <span class="fa-solid fa-star"></span>
-                        <span class="fa-solid fa-star"></span>
-                        <?php 
-                        }
-                        ?>
-                        <?php 
-                    if($review['rating']==4){
-                        ?>
-                        <span class="fa-solid fa-star"></span>
-                        <span class="fa-solid fa-star"></span>
-                        <span class="fa-solid fa-star"></span>
-                        <span class="fa-solid fa-star"></span>
-                        <?php 
-                        }
-                        ?>
-                        <?php 
-                    if($review['rating']==5){
-                        ?>
-                        <span class="fa-solid fa-star"></span>
-                        <span class="fa-solid fa-star"></span>
-                        <span class="fa-solid fa-star"></span>
-                        <span class="fa-solid fa-star"></span>
-                        <span class="fa-solid fa-star"></span>
-                        <?php 
-                        }
-                        ?>
-                   
-               
+                  <!--div class="food-menu-box">
+                        <div class="food-menu-desc"-->
+
+                    
+                    <div class="col-md-6">
+                        <div class="feedback-box">
+                            <h4 class="text-start"><?php echo $customer_name;?></h4>
+                            <p class="text-end">
+                                <?php 
+                                if($review['rating']==1){
+                                    ?>
+                                    <span class="fa-solid fa-star"></span>
+                                    <?php 
+                                    }
+                                    ?>
+                                    <?php 
+                                if($review['rating']==2){
+                                    ?>
+                                    <span class="fa-solid fa-star"></span>
+                                    <span class="fa-solid fa-star"></span>
+                                    <?php 
+                                    }
+                                    ?>
+                                    <?php 
+                                if($review['rating']==3){
+                                    ?>
+                                    <span class="fa-solid fa-star"></span>
+                                    <span class="fa-solid fa-star"></span>
+                                    <span class="fa-solid fa-star"></span>
+                                    <?php 
+                                    }
+                                    ?>
+                                    <?php 
+                                if($review['rating']==4){
+                                    ?>
+                                    <span class="fa-solid fa-star"></span>
+                                    <span class="fa-solid fa-star"></span>
+                                    <span class="fa-solid fa-star"></span>
+                                    <span class="fa-solid fa-star"></span>
+                                    <?php 
+                                    }
+                                    ?>
+                                    <?php 
+                                if($review['rating']==5){
+                                    ?>
+                                    <span class="fa-solid fa-star"></span>
+                                    <span class="fa-solid fa-star"></span>
+                                    <span class="fa-solid fa-star"></span>
+                                    <span class="fa-solid fa-star"></span>
+                                    <span class="fa-solid fa-star"></span>
+                                    <?php 
+                                    }
+                                    ?>
+                            
+                        
+                                </p>
+                                <p class="food-price"><?php echo $email;?></p>
+                                <p class="food-detail"><?php echo $message;?></p>
+                        </div>
+                    
                 </div>
-                    <p class="food-price"><?php echo $email;?></p>
-                    <p class="food-detail"><?php echo $message;?></p>
-            </div>
-        </div>
         <?php
                 }
             }else{
                 echo "<div class='error'>You have No Feedback Yet</div>";
             }
             ?>
-    </div>
+        </div>
 </section>
+      <!-- Include Footer -->
+      <?php include('./partials/footer.php');?>

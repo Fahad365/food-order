@@ -5,7 +5,7 @@ include ('./partials/menu.php');?>
 <!-- Create form to add Admin -->
 <div class="container mt-5">
    
-    <div class="row">
+    <div class="row d-block">
         <div class="col-mb-8">
             <div class="card">
                 <div class="card-header ">

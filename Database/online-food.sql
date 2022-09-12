@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2022 at 08:03 PM
+-- Generation Time: Sep 11, 2022 at 03:51 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -39,9 +39,8 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`Id`, `full_name`, `username`, `password`) VALUES
-(1, 'Fahad Hossain', 'Fahad', '827ccb0eea8a706c4c34a16891f84e7b'),
-(29, 'Roman', 'roman', 'b0baee9d279d34fa1dfd71aadb908c3f'),
-(48, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(48, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(55, 'Fahad Hossain', 'Roman', 'dcddb75469b4b4875094e14561e573d8');
 
 -- --------------------------------------------------------
 
@@ -64,10 +63,30 @@ CREATE TABLE `tbl_category` (
 INSERT INTO `tbl_category` (`Id`, `title`, `image_name`, `featured`, `active`) VALUES
 (23, 'Burger', 'Food_Category_68.jpg', 'yes', 'yes'),
 (26, 'Pastaaa', 'Food_Category_45.jpg', 'yes', 'yes'),
-(27, 'Pizza', 'Food_Category_57.jpg', 'yes', 'yes'),
-(28, 'Club Sandwich', 'Food_Category_69.jpg', 'yes', 'yes'),
-(29, 'Chicken Fry', 'Food_Category_1.jpg', 'yes', 'yes'),
-(30, 'Cold Coffee', 'Food_Category_19.jpg', 'yes', 'yes');
+(27, 'Pizza', 'Food_Category_57.jpg', 'yes', 'yes');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_contact`
+--
+
+CREATE TABLE `tbl_contact` (
+  `Id` int(11) UNSIGNED NOT NULL,
+  `customer_name` varchar(150) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `rating` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_contact`
+--
+
+INSERT INTO `tbl_contact` (`Id`, `customer_name`, `email`, `message`, `rating`) VALUES
+(7, 'Jamil', 'mr@gmail.com', 'hello', 3),
+(8, 'Fahad Hossain', 'fahad@gmail.com', 'Helllo', 4),
+(9, 'Rahat Hossain Rafi', 'rahat@gmail.com', 'Nice Service', 5);
 
 -- --------------------------------------------------------
 
@@ -97,8 +116,7 @@ INSERT INTO `tbl_food` (`Id`, `title`, `description`, `price`, `image_name`, `ca
 (37, 'pi1', 'pi1', '400.00', 'Food_Category_48.jpg', 27, 'yes', 'yes'),
 (38, 'B2', 'B2', '350.00', 'Food_Category_27.jpg', 23, 'yes', 'yes'),
 (39, 'pi2', 'pi2', '450.00', 'Food_Category_50.jpg', 27, 'yes', 'yes'),
-(41, 'B3', 'B3', '350.00', 'Food_Category_56.jpg', 23, 'yes', 'yes'),
-(42, 'cf1', 'cf1', '90.00', 'Food_Category_38.jpg', 29, 'yes', 'yes');
+(41, 'B3', 'B3', '350.00', 'Food_Category_56.jpg', 23, 'yes', 'yes');
 
 -- --------------------------------------------------------
 
@@ -126,10 +144,12 @@ CREATE TABLE `tbl_order` (
 --
 
 INSERT INTO `tbl_order` (`Id`, `food`, `image_name`, `price`, `qty`, `total`, `order_date`, `status`, `customer_name`, `customer_contact`, `customer_email`, `customer_address`) VALUES
-(11, 'p2', 'Food_Category_78.jpg', '200.00', 1, '200.00', '2022-08-24 08:14:39', 'ordered', 'Fahad', '01622921671', 'fahad@gmail.com', 'bcnvbmv'),
-(12, 'pi1', 'Food_Category_48.jpg', '400.00', 1, '400.00', '2022-08-24 08:16:06', 'ordered', 'Fahad Hossain', '01622921671', 'mr@gmail.com', 'bxcbv'),
-(13, 'pi2', 'Food_Category_50.jpg', '450.00', 1, '450.00', '0122-08-25 12:30:05', 'ordered', 'Fahad Hossain', '01622921671', 'fahad@gmail.com', 'kalachadpur'),
-(14, 'p1', 'Food_Category_8.jpg', '250.00', 3, '750.00', '2022-08-25 10:46:09', 'ordered', 'x', '01622921671', 'x@gmail.com', 'nodda');
+(14, 'p1', 'Food_Category_8.jpg', '250.00', 3, '750.00', '2022-08-25 10:46:09', 'Delivered', 'x', '01622921671', 'x@gmail.com', 'nodda'),
+(17, 'B2', 'Food_Category_27.jpg', '350.00', 1, '350.00', '2022-09-01 09:57:33', 'Ordered', 'Zahid Hasan Shuvo', '01622921671', 'zahid@gmail.com', 'newmarket'),
+(18, 'pi2', 'Food_Category_50.jpg', '450.00', 2, '900.00', '2022-09-03 11:44:00', 'Delivered', 'Alamin', '01622921671', 'dummy@gmail.com', 'Basundhara C'),
+(19, 'p1', 'Food_Category_8.jpg', '250.00', 2, '500.00', '2022-09-05 11:05:21', 'Ordered', 'Limon', '01719876345', 'limon@gmail.com', 'Nikunja_2'),
+(28, 'B2', 'Food_Category_27.jpg', '350.00', 1, '350.00', '2022-09-07 07:24:07', 'Ordered', 'Limon', '01719876345', 'limon@gmail.com', 'uttara'),
+(29, 'pi2', 'Food_Category_50.jpg', '450.00', 1, '450.00', '2022-09-07 07:25:09', 'Delivered', 'Takib', '01719876345', 'takib@gmail.com', 'Basundhara');
 
 --
 -- Indexes for dumped tables
@@ -145,6 +165,12 @@ ALTER TABLE `tbl_admin`
 -- Indexes for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `tbl_contact`
+--
+ALTER TABLE `tbl_contact`
   ADD PRIMARY KEY (`Id`);
 
 --
@@ -167,25 +193,31 @@ ALTER TABLE `tbl_order`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `Id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `Id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `Id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `Id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `tbl_contact`
+--
+ALTER TABLE `tbl_contact`
+  MODIFY `Id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_food`
 --
 ALTER TABLE `tbl_food`
-  MODIFY `Id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `Id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `Id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `Id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
